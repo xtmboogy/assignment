@@ -16,3 +16,16 @@ class Item {
   String display()=>"Item Name: $itemName\nRate: $rate\nQuanatiy: $quantity";
  
 }
+
+class Invoice extends Item{
+ 
+  late DateTime inveDt;
+ 
+  Invoice({required itemName, required rate, required quantity })
+    :inveDt = DateTime.now(),
+    super(itemName:itemName,rate:rate,quantity:quantity);
+ 
+  @override
+  String display()=> "Invoice Date: $inveDt\n${super.display()}\nCost: ${super.quantity * super.rate}";
+ 
+}
