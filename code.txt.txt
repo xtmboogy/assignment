@@ -1,0 +1,18 @@
+void main() {
+ 
+  var inv01 = Invoice(itemName:"Soap", rate:20, quantity:4);
+  String msg = inv01.display();
+  print(msg);
+ 
+}
+
+class Item {
+  late String itemName;
+  late int rate;
+  late int quantity;
+ 
+  Item({required this.itemName, required this.rate, required this.quantity});
+ 
+  String display()=>"Item Name: $itemName\nRate: $rate\nQuanatiy: $quantity";
+ 
+}
